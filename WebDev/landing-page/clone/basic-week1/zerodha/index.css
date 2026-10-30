@@ -10,6 +10,11 @@
     justify-content: space-around;
 }
 
+.flex-center-bycol{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 span {
     cursor: pointer;
     padding-left:20px ;
