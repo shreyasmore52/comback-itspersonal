@@ -1,21 +1,50 @@
 * {
     padding: 0;
     margin: 0;
-    margin-top: 10px;
+    font-family: sans-serif;
+    color: #424242;
 }
+
 .flex-class{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    justify-content: space-around;
 }
 
 .flex-center-bycol{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 80px;
+    margin-top: 60px;
+    padding-bottom: 60px;
 }
-span {
+
+.text-center {
+text-align: center;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#nav {
+    border-bottom: 1px solid rgb(238,238,238);
+    padding: 25px 10%;
+}
+
+#nav div {
+    display: flex;
+    gap:30px
+}
+
+#nav span {
+    font-size: 14px;
     cursor: pointer;
-    padding-left:20px ;
+}
+
+#nav span:hover {
+    color: #387ed1;
 }
