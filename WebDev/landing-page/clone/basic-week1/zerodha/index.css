@@ -48,3 +48,26 @@ header {
 #nav span:hover {
     color: #387ed1;
 }
+
+.landing-subheading {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.button {
+    display: inline-flex;
+    background-color: #387ed1;
+    color: #fff;
+    border: 1px solid rgba(0,0,0,0);
+    border-radius: 3px;
+    padding: 10px 30px;
+    font-size: 1.2em;
+    font-weight: 500;
+    cursor: pointer;
+    box-size: border-box;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 25px;
+    box-shadow: 1px 1px 10px black;
+}
