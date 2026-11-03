@@ -115,9 +115,9 @@ h1,h3,h2,h4,h5,h6{
 }
 
 #banner {
-    width: 100%;
     padding: 20px 10%;
     background-color:#f6fbff;
+    margin-bottom: 120px;
 }
 
 #banner div {
@@ -143,4 +143,33 @@ h1,h3,h2,h4,h5,h6{
 
 .link:hover {
     color: #424242;
+}
+
+#pricing {
+    justify-content:space-evenly;
+    padding: 25px 10%;
+}
+
+#pricing img{
+    display:inline-block;
+    width:120px;
+    position:relative;
+    top:22px
+}
+
+.pricing-p{
+    font-size:10px;
+    color:#666;
+    line-height:15px;
+    position:relative;
+    right:30;
+}
+
+.gap-div {
+    display: flex;
+    gap:20px;
+}
+
+.max-widht-50 {
+    widht: 50%
 }
