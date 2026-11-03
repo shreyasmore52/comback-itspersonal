@@ -37,6 +37,7 @@ h1,h3,h2,h4,h5,h6{
 #nav {
     border-bottom: 1px solid rgb(238,238,238);
     padding: 25px 10%;
+    background-color: #fff;
 }
 
 #nav div {
@@ -111,4 +112,35 @@ h1,h3,h2,h4,h5,h6{
 .row h3{
     margin-bottom: 15px;
     font-size:1.25rem
+}
+
+#banner {
+    width: 100%;
+    padding: 20px 10%;
+    background-color:#f6fbff;
+}
+
+#banner div {
+    display: flex;
+    gap:30px
+}
+
+#banner img{
+    maxwidth: 100%;
+}
+
+#banner span{
+    font-size:14px;
+    color:#666;
+    font-weight:400;
+}
+
+.link {
+    display: inline;
+    cursor: pointer;
+    color: #387ed1;
+}
+
+.link:hover {
+    color: #424242;
 }
