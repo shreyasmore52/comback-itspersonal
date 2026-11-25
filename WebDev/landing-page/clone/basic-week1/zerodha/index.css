@@ -157,6 +157,16 @@ h1,h3,h2,h4,h5,h6{
     top:22px
 }
 
+#education {
+    justify-content:space-evenly;
+    padding: 25px 10%;
+}
+
+#education img{
+    max-width: 100%;
+}
+
+
 .pricing-p{
     font-size:10px;
     color:#666;
