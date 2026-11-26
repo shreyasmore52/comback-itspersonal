@@ -85,9 +85,42 @@ Assignment #1
 Write a function sum that finds the sum of two numbers.
 Side quest - Try passing in a string instead of a number and see what happens?*/
 
-function makeSum(a,b){
-  return a+b;
+// function makeSum(a,b){
+//   return a+b;
+// }
+
+// console.log(makeSum(8,8))
+// console.log(makeSum("iamcoder",24))
+
+/*
+Assignment
+Write an if/else statement that checks if a number is even or odd. If it's even, print "The number is even." Otherwise, print "The number is odd."
+*/
+
+function checkEvenOdd(...numbers){
+  let list = numbers.flat();
+  let evenNum = [];
+  let oddNum = [];
+  let invalidItems = [];
+
+   list.forEach((i) => {
+     if (typeof i !== "number" || Number.isNaN(i)) {
+           invalidItems.push(i);
+           return; // Skip to the next item in .forEach()
+     }
+     if(i % 2 === 0){
+       evenNum.push(i);
+     }
+     else{
+       oddNum.push(i);
+     }
+   });
+   return JSON.stringify({ evenNum, oddNum, invalidItems })
 }
 
-console.log(makeSum(8,8))
-console.log(makeSum("iamcoder",24))
+// console.log(checkEvenOdd(1,2,4,3,5,6,7,8,9,10,11,12,13,14,15));
+
+let a = [3,5,6,7,8,9,10,11,12,13,14,15]
+let mixed = [3, 4, "hello", "Str-10",10, 7, NaN, 0,12];
+console.log(checkEvenOdd(a))
+console.log(checkEvenOdd(mixed))
