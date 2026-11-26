@@ -128,34 +128,83 @@ Write an if/else statement that checks if a number is even or odd. If it's even,
 //Complex Types in Js
 // Objects -> is is collection of key value pair
 
-let user1 =[
-    {
-      name: "shreyas",
-      age:18,
-      gender: "male"
-    },{
-      name: "Vishu",
-      age:17,
-      gender:"male"
-    },{
-      name: "Shree",
-      age:22,
-      gender:"female"
-    }
-  ]
+// let user1 =[
+//     {
+//       name: "shreyas",
+//       age:18,
+//       gender: "male"
+//     },{
+//       name: "Vishu",
+//       age:17,
+//       gender:"male"
+//     },{
+//       name: "Shree",
+//       age:22,
+//       gender:"female"
+//     }
+//   ]
 
 
-console.log(user1["0"].name); // we use either this way
-console.log(user1[0].age); // or this way
+// console.log(user1["0"].name); // we use either this way
+// console.log(user1[0].age); // or this way
 
 // write a function to tack user Obj as input and print it
 
-function greet(key){
-  key.forEach((i) => {
-    if(i.age>= 18){
-      return console.log(`Hello ${i.name} and your age is ${i.age} and gender probably ${i.gender}`);
+// function greet(key){
+//   key.forEach((i) => {
+//     if(i.age>= 18){
+//       return console.log(`Hello ${i.name} and your age is ${i.age} and gender probably ${i.gender}`);
+//     }
+//   })
+// }
+
+// greet(user1);
+
+/*
+Create a function that takes an array of objects as input,
+and returns the users whose age > 18 and are male
+*/
+
+let user = [
+  {
+    name: "shreya",
+    age : 22,
+    gender: "male",
+    address: {
+      city: "Mumbai",
+      country: "India",
+      address: "22 DLF Col Richand Group"
+    }
+  },{
+    name: "shreyas",
+    age : 18,
+    gender: "male",
+    address: {
+      city: "Mumbai",
+      country: "India",
+      address: "23 DLF Col Richand Group"
+    }
+  },{
+      name: "shree",
+      age : 20,
+      gender: "female",
+      address: {
+        city: "Pune",
+        country: "India",
+        address: "12 DLF Col Richand Group"
+      }
+  }
+]
+
+function validator (ObjUser){
+  const finaldata = [];
+  ObjUser.forEach((i)=>{
+    if(i.age >= 18 && i.gender === "male" && i.address.city === "Mumbai"){
+      // return console.log("sorted data :", i)
+       finaldata.push(i)
     }
   })
+  return console.log("sorted data: ", finaldata);
 }
 
-greet(user1);
+validator(user)
