@@ -50,23 +50,23 @@ console.log(number[2])
 // console.log("eligibleVoters will be",result);
 
 // or using filters
-let userAge = [21, 12, 33, 40, 1, 18, 17, 17.9, 18.2];
+// let userAge = [21, 12, 33, 40, 1, 18, 17, 17.9, 18.2];
 
-function voterCheck(ages) {
-  ages.forEach((age) => {
-    let completedYears = Math.floor(age); // 17.9 -> 17, 18.2 -> 18
+// function voterCheck(ages) {
+//   ages.forEach((age) => {
+//     let completedYears = Math.floor(age); // 17.9 -> 17, 18.2 -> 18
 
-    if (completedYears >= 18) {
-      console.log(`${age}: Let them vote!`);
-    } else {
-      let yearsLeft = 18 - completedYears;
-      let unit = yearsLeft === 1 ? "year" : "years";
-      console.log(`${age}: Wait ${yearsLeft} more ${unit} to vote.`);
-    }
-  });
-}
+//     if (completedYears >= 18) {
+//       console.log(`${age}: Let them vote!`);
+//     } else {
+//       let yearsLeft = 18 - completedYears;
+//       let unit = yearsLeft === 1 ? "year" : "years";
+//       console.log(`${age}: Wait ${yearsLeft} more ${unit} to vote.`);
+//     }
+//   });
+// }
 
-voterCheck(userAge);
+// voterCheck(userAge);
 
 /*
 21: Let them vote!
@@ -79,3 +79,15 @@ voterCheck(userAge);
 17.9: Wait 1 more year to vote.
 18.2: Let them vote!
 */
+
+/*
+Assignment #1
+Write a function sum that finds the sum of two numbers.
+Side quest - Try passing in a string instead of a number and see what happens?*/
+
+function makeSum(a,b){
+  return a+b;
+}
+
+console.log(makeSum(8,8))
+console.log(makeSum("iamcoder",24))
