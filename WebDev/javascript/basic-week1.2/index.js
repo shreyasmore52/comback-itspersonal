@@ -97,30 +97,65 @@ Assignment
 Write an if/else statement that checks if a number is even or odd. If it's even, print "The number is even." Otherwise, print "The number is odd."
 */
 
-function checkEvenOdd(...numbers){
-  let list = numbers.flat();
-  let evenNum = [];
-  let oddNum = [];
-  let invalidItems = [];
+// function checkEvenOdd(...numbers){
+//   let list = numbers.flat();
+//   let evenNum = [];
+//   let oddNum = [];
+//   let invalidItems = [];
 
-   list.forEach((i) => {
-     if (typeof i !== "number" || Number.isNaN(i)) {
-           invalidItems.push(i);
-           return; // Skip to the next item in .forEach()
-     }
-     if(i % 2 === 0){
-       evenNum.push(i);
-     }
-     else{
-       oddNum.push(i);
-     }
-   });
-   return JSON.stringify({ evenNum, oddNum, invalidItems })
-}
+//    list.forEach((i) => {
+//      if (typeof i !== "number" || Number.isNaN(i)) {
+//            invalidItems.push(i);
+//            return; // Skip to the next item in .forEach()
+//      }
+//      if(i % 2 === 0){
+//        evenNum.push(i);
+//      }
+//      else{
+//        oddNum.push(i);
+//      }
+//    });
+//    return JSON.stringify({ evenNum, oddNum, invalidItems })
+// }
 
 // console.log(checkEvenOdd(1,2,4,3,5,6,7,8,9,10,11,12,13,14,15));
 
-let a = [3,5,6,7,8,9,10,11,12,13,14,15]
-let mixed = [3, 4, "hello", "Str-10",10, 7, NaN, 0,12];
-console.log(checkEvenOdd(a))
-console.log(checkEvenOdd(mixed))
+// let a = [3,5,6,7,8,9,10,11,12,13,14,15]
+// let mixed = [3, 4, "hello", "Str-10",10, 7, NaN, 0,12];
+// console.log(checkEvenOdd(a))
+// console.log(checkEvenOdd(mixed))
+
+//Complex Types in Js
+// Objects -> is is collection of key value pair
+
+let user1 =[
+    {
+      name: "shreyas",
+      age:18,
+      gender: "male"
+    },{
+      name: "Vishu",
+      age:17,
+      gender:"male"
+    },{
+      name: "Shree",
+      age:22,
+      gender:"female"
+    }
+  ]
+
+
+console.log(user1["0"].name); // we use either this way
+console.log(user1[0].age); // or this way
+
+// write a function to tack user Obj as input and print it
+
+function greet(key){
+  key.forEach((i) => {
+    if(i.age>= 18){
+      return console.log(`Hello ${i.name} and your age is ${i.age} and gender probably ${i.gender}`);
+    }
+  })
+}
+
+greet(user1);
